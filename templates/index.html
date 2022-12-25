@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title>{{ name }}</title>
+  <link href="/static/style.css" rel="stylesheet" type="text/css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="{{ name }} Documentation">
+  <meta name="author" content="Bricked">
+
+  <meta property="og:title" content="{{ name }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ url }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ avatar }}">
+</head>
+
+<body>
+  <div>
+    <div style="float: left">
+      <img src="{{ avatar }}" style="border-radius: 50%; height:60px; margin-right: 10px;"/>
+    </div>
+    <div>
+      <h1>{{ name }}</h1>
+      {{ description }}
+    </div>
+  </div>
+
+  <p>
+  <a href="/invite" class="block">
+    <button style="--sub: mediumseagreen;">Invite</button>
+  </a>
+  <a href="/server" class="block">
+    <button style="--sub: cornflowerblue;">Guffos Server</button>
+  </a>
+  <a href="/code" class="block">
+    <button style="--sub: orange;">Code</button>
+  </a>
+  
+
+  <h2>Bot Info</h2>
+  <table>
+    <tr>
+      <th>Latency</th>
+      <td>{{ latency }}ms</td>
+    </tr>
+    <tr>
+      <th>Guilds</th>
+      <td>{{ guilds }}</td>
+    </tr>
+  </table>
+
+  <h2>Commands</h2>
+  {% for cog in cogs %}
+  {% if cogs[cog].get_commands()!=[] %}
+    <h4>{{ cog }}</h4>
+    <ul>
+    {% for command in cogs[cog].get_commands() %}
+      <li>
+        {{ command.name }}
+        <span class="hovertext">
+          {% for line in help(command).split('\n') %}
+            {{ line }}<br>
+          {% endfor %}
+        </span>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %} 
+  {% endfor %}
+
+</body>
+</html></html>

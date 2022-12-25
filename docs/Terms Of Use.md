@@ -1,0 +1,1 @@
+The fancade terms of use/terms of service (TOS) can be found at [fancade.com/terms](https://www.fancade.com/terms/)

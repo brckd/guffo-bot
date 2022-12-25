@@ -1,0 +1,44 @@
+{
+  "files": {
+    "cogs/economy.py": [
+      {
+        "id": "4f81143d-7b14-434f-b9b6-f86f594049be",
+        "line": 506,
+        "version": 7280,
+        "index": 19714
+      }
+    ],
+    "cogs/errors.py": [
+      {
+        "id": "066f66f3-6d30-4db7-87bc-b1d4944f5118",
+        "line": 1,
+        "version": 321,
+        "index": 0
+      }
+    ],
+    "pyproject.toml": [
+      {
+        "id": "2f4d24b6-fa89-485a-adee-61c4bf318371",
+        "line": 1,
+        "version": 27,
+        "index": 1
+      }
+    ],
+    "static/style.css": [
+      {
+        "id": "c9fda266-f307-401a-93dc-90d3095e8cf0",
+        "line": 78,
+        "version": 249,
+        "index": 1525
+      }
+    ],
+    "templates/index.html": [
+      {
+        "id": "21542792-63a6-446d-a25e-6dadd83d2af2",
+        "line": 60,
+        "version": 218,
+        "index": 1439
+      }
+    ]
+  }
+}
